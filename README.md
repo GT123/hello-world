@@ -1,3 +1,1 @@
-# hello-world
-
-I would like to learn git in depth :-)
+yes , learn step by step
