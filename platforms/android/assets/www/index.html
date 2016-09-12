@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<!-- Mirrored from stampswebdesign.com/withersc/hud/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 May 2016 01:00:30 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <title>Virtual Stamps</title>
+    <meta name="description" content="A virtual tour of Stamps">
+    <script src="cordova.js"></script>
+    <script src="aframe.io/releases/latest/aframe.min.js"></script>
+    <script src="dist/aframe-no-click-look-controls.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        //debug.textContent="on Device Ready entered: ";
+        // Now safe to use device APIs
+        var debug = document.getElementById("debugwindow");
+        Wechat.isInstalled(function(installed) {
+            /* debug.textContent += "\n Wechat installed: " + (installed ? "Yes" : "No");
+             Wechat.share({
+                 text: "This is just a plain string",
+                 scene: Wechat.Scene.TIMELINE // share to Timeline
+             }, function() {
+                 alert("Success");
+             }, function(reason) {
+                 alert("Failed: " + reason);
+             });*/
+            var scope = "snsapi_userinfo",
+                state = "_" + (+new Date());
+            Wechat.auth(scope, state, function(response) {
+                // you may use response.code to get the access token.
+                alert(JSON.stringify(response));
+            }, function(reason) {
+                alert("Failed: " + reason);
+            });
+        }, function(reason) {
+            debug.textContent += "\n Failed: " + reason;
+        });
+    }
+    </script>
+</head>
+
+<body onload="onLoad()">
+    <textarea id="debugwindow" rows="3" cols="20">
+        在w3school，你可以找到你所需要的所有的网站建设教程。
+    </textarea>
+    <!--   <a-scene>
+      <a-sky id="maphall" src="pic1.jpg" rotation="0 -130 0" visible="true"></a-sky>
+  
+    </a-scene> -->
+</body>
+
+</html>

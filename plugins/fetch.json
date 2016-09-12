@@ -1,0 +1,36 @@
+{
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-crosswalk-webview": {
+        "source": {
+            "type": "local",
+            "path": "C:\\Users\\i076318\\Desktop\\cordova-plugin-crosswalk-webview-master"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-device": {
+        "source": {
+            "type": "local",
+            "path": "C:\\Users\\i076318\\Desktop\\cordova-plugin-device-master"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-wechat": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-wechat"
+        },
+        "is_top_level": true,
+        "variables": {
+            "WECHATAPPID": "wxa0df246ffe590cd9"
+        }
+    }
+}
